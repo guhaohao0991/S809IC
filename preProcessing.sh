@@ -9,7 +9,7 @@ fi
 # Generate the airfoil mesh from coarse data points
 
 echo "Generating airfoil mesh"
-python genAirFoilMesh.py &> logMeshGeneration,txt
+python genAirFoilMesh.py &> logMeshGeneration.txt
 plot3dToFoam -noBlank volumeMesh.xyz >> logMeshGeneration.txt
 autoPatch 45 -overwrite >> logMeshGeneration.txt
 createPatch -overwrite >> logMeshGeneration.txt
